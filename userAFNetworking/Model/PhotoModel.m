@@ -17,7 +17,7 @@
         PhotoModel* model = [[PhotoModel alloc]init];
 
         model.imgUrl = infoDict[@"image_url"];
-        NSLog(@"img url is %@",infoDict[@"image_url"]);
+        model.name = infoDict[@"name"];
         [photoArr addObject:model];
     }
     return photoArr;

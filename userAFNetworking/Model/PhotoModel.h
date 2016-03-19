@@ -10,7 +10,7 @@
 
 @interface PhotoModel : NSObject
 @property(nonatomic,strong)NSString* imgUrl;
-
+@property(nonatomic,strong)NSString* name;
 
 /**
  * 简析json数据
