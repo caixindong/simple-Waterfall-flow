@@ -10,7 +10,6 @@
 
 @interface MyCollectionViewCell()
 @property (weak, nonatomic) IBOutlet UIImageView *image;
-@property (weak, nonatomic) IBOutlet UILabel *title;
 
 
 @end
@@ -27,7 +26,6 @@
     if ([model isMemberOfClass:[PhotoModel class]]) {
         PhotoModel* newModel = (PhotoModel*)model;
         [_image setImageWithURL:[NSURL URLWithString:newModel.imgUrl]];
-        _title.text = newModel.name;
     }
 }
 @end

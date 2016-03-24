@@ -13,7 +13,7 @@
 @property(nonatomic,strong)NSString* name;
 
 /**
- * 简析json数据
+ * 解析json数据
  **/
 -(NSArray*)getDataFromDict:(NSDictionary*)dict;
 @end
