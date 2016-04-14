@@ -35,6 +35,8 @@
 		4E1ED9A41C91B6B9004C5C1B /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E1ED98A1C91B6B9004C5C1B /* MyCollectionViewCell.xib */; };
 		4E1ED9A51C91B6B9004C5C1B /* BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1ED98D1C91B6B9004C5C1B /* BaseViewModel.m */; };
 		4E1ED9A61C91B6B9004C5C1B /* GetPototViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1ED98F1C91B6B9004C5C1B /* GetPototViewModel.m */; };
+		4EDF01401CBF947400AFF345 /* MyFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF013F1CBF947400AFF345 /* MyFlowLayout.m */; };
+		4EDF01431CBF984700AFF345 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDF01421CBF984700AFF345 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +98,10 @@
 		4E1ED98D1C91B6B9004C5C1B /* BaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewModel.m; sourceTree = "<group>"; };
 		4E1ED98E1C91B6B9004C5C1B /* GetPototViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetPototViewModel.h; sourceTree = "<group>"; };
 		4E1ED98F1C91B6B9004C5C1B /* GetPototViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetPototViewModel.m; sourceTree = "<group>"; };
+		4EDF013E1CBF947400AFF345 /* MyFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFlowLayout.h; sourceTree = "<group>"; };
+		4EDF013F1CBF947400AFF345 /* MyFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFlowLayout.m; sourceTree = "<group>"; };
+		4EDF01411CBF984700AFF345 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		4EDF01421CBF984700AFF345 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,8 +230,12 @@
 		4E1ED97E1C91B6B9004C5C1B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4EDF013E1CBF947400AFF345 /* MyFlowLayout.h */,
+				4EDF013F1CBF947400AFF345 /* MyFlowLayout.m */,
 				4E1ED97F1C91B6B9004C5C1B /* ViewController.h */,
 				4E1ED9801C91B6B9004C5C1B /* ViewController.m */,
+				4EDF01411CBF984700AFF345 /* DetailViewController.h */,
+				4EDF01421CBF984700AFF345 /* DetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -341,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E1ED99D1C91B6B9004C5C1B /* UIProgressView+AFNetworking.m in Sources */,
+				4EDF01401CBF947400AFF345 /* MyFlowLayout.m in Sources */,
 				4E1ED9961C91B6B9004C5C1B /* AFURLRequestSerialization.m in Sources */,
 				4E1ED99F1C91B6B9004C5C1B /* UIWebView+AFNetworking.m in Sources */,
 				4E1ED99C1C91B6B9004C5C1B /* UIImageView+AFNetworking.m in Sources */,
@@ -348,6 +359,7 @@
 				4E1ED9951C91B6B9004C5C1B /* AFURLConnectionOperation.m in Sources */,
 				4E1ED99B1C91B6B9004C5C1B /* UIButton+AFNetworking.m in Sources */,
 				4E1ED9A11C91B6B9004C5C1B /* PhotoModel.m in Sources */,
+				4EDF01431CBF984700AFF345 /* DetailViewController.m in Sources */,
 				4E1ED9A61C91B6B9004C5C1B /* GetPototViewModel.m in Sources */,
 				4E1ED9941C91B6B9004C5C1B /* AFSecurityPolicy.m in Sources */,
 				4E1ED9901C91B6B9004C5C1B /* AFHTTPRequestOperation.m in Sources */,

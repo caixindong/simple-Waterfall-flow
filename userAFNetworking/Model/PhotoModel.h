@@ -11,9 +11,9 @@
 @interface PhotoModel : NSObject
 @property(nonatomic,strong)NSString* imgUrl;
 @property(nonatomic,strong)NSString* name;
-
+@property(nonnull,strong)NSString* Description;
 /**
  * 解析json数据
  **/
--(NSArray*)getDataFromDict:(NSDictionary*)dict;
+-(NSArray *)getDataFromDict:(NSDictionary*)dict;
 @end

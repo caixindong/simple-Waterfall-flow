@@ -18,6 +18,7 @@
 
         model.imgUrl = infoDict[@"image_url"];
         model.name = infoDict[@"name"];
+        model.Description = infoDict[@"description"];
         [photoArr addObject:model];
     }
     return photoArr;

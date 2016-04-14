@@ -9,9 +9,9 @@
 #import "ViewController.h"
 #import "GetPototViewModel.h"
 #import "MyCollectionViewCell.h"
-
-
-@interface ViewController ()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+#import "MyFlowLayout.h"
+#import "DetailViewController.h"
+@interface ViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *myCollectionView;
 
@@ -24,9 +24,11 @@
     [super viewDidLoad];
     
 
-    
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.title = @"show";
     [_myCollectionView registerNib:[UINib nibWithNibName:CELLID bundle:nil] forCellWithReuseIdentifier:CELLID];
     
+    _myCollectionView.collectionViewLayout = [[MyFlowLayout alloc]init];
     GetPototViewModel* viewModel = [[GetPototViewModel alloc]init];
     [viewModel setSuccessBlock:^(id returnData) {
         _dataArr = (NSArray*)returnData;
@@ -51,23 +53,19 @@
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    DetailViewController* vc = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailViewController"];
+    vc.model = _dataArr[indexPath.item];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    CGFloat width  = [UIScreen mainScreen].bounds.size.width;
-    if (indexPath.row==0||indexPath.row==3||indexPath.row==6) {
-        return CGSizeMake(width, width/3*2);
-    }else{
-        CGFloat sizeW = (width-0)/2;
-        return  CGSizeMake(sizeW, sizeW);
-    }
-    
+-(void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath{
+    cell.layer.transform = CATransform3DMakeScale(0.1, 0.1,1);
+    [UIView animateWithDuration:0.5 animations:^{
+        cell.layer.transform = CATransform3DMakeScale(1, 1, 1);
+    }];
 }
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
-    return UIEdgeInsetsMake(0, 0, 0, 0);
-}
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
-    return 0;
-}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
